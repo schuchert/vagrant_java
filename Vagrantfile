@@ -19,7 +19,7 @@ Vagrant.configure(2) do |config|
     chef.add_recipe "git"
     chef.add_recipe "vim"
     chef.add_recipe "awesome_vim"
-#    chef.add_recipe "java"
+    chef.add_recipe "java"
     chef.add_recipe "maven" 
     chef.add_recipe "idea::default"
 
