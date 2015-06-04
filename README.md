@@ -3,7 +3,7 @@
   * Note: You might have to experiment with the version of VirtualBox on Windows 7 machines due to virus scanning software
 * Install [the VirtualBox Extensions](https://www.virtualbox.org/wiki/Downloads)
 * Install [Vagrant](http://www.vagrantup.com/downloads)
-* You'll need a unix shell and git installed.
+* You'll need a unix shell and have git installed.
   * Windows users, I recommend [Git Bash](https://msysgit.github.io/)
 * Clone this repo:
 ```bash
