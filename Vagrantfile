@@ -27,6 +27,7 @@ Vagrant.configure(2) do |config|
       "java" => { 
         "install_flavor" => "oracle", 
         "jdk_version" => "8", 
+        "set_default" => true,
         "oracle" => { 
           "accept_oracle_download_terms" => true 
         } 
