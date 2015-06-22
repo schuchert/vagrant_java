@@ -62,3 +62,8 @@ if !::File.exists?("#{install_path}")
   end
 
 end
+
+cookbook_file "Idea.desktop" do
+  path "/home/vagrant/Desktop/Idea.desktop"
+	action :create_if_missing
+end
