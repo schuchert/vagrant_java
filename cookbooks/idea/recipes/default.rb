@@ -66,4 +66,7 @@ end
 cookbook_file "Idea.desktop" do
   path "/home/vagrant/Desktop/Idea.desktop"
 	action :create_if_missing
+	mode '0755'
+	owner 'vagrant'
+	group 'vagrant'
 end
