@@ -26,3 +26,9 @@ end
 
 include_recipe "java::set_attributes_from_version"
 include_recipe "java::#{node['java']['install_flavor']}"
+
+java_alternatives "set java alternatives" do
+    java_location '/usr/local/java'
+    bin_cmds ["java", "javac"]
+    action :set
+end
