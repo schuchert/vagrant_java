@@ -18,19 +18,19 @@
 # limitations under the License.
 
 # default jdk attributes
-default['java']['jdk_version'] = '6'
+default['java']['jdk_version'] = '8'
 default['java']['arch'] = kernel['machine'] =~ /x86_64/ ? "x86_64" : "i586"
 default['java']['openjdk_packages'] = []
 default['java']['openjdk_version'] = nil
-default['java']['accept_license_agreement'] = false
+default['java']['accept_license_agreement'] = true
 default['java']['set_default'] = true
 default['java']['alternatives_priority'] = 1062
-default['java']['set_etc_environment'] = false
+default['java']['set_etc_environment'] = true
 
 # the following retry parameters apply when downloading oracle java
 default['java']['ark_retries'] = 0
 default['java']['ark_retry_delay'] = 2
-default['java']['ark_timeout'] = 600
+default['java']['ark_timeout'] = 1200
 
 case node['platform_family']
 when "windows"
@@ -41,7 +41,7 @@ when "windows"
 when "mac_os_x"
   default['java']['install_flavor'] = "homebrew"
 else
-  default['java']['install_flavor'] = "openjdk"
+  default['java']['install_flavor'] = "oracle"
 end
 
 case node['java']['install_flavor']
@@ -57,7 +57,7 @@ when 'ibm', 'ibm_tar'
                                               "schemagen", "serialver", "tnameserv", "wsgen", "wsimport", "xjc" ]
 
   default['java']['ibm']['7']['bin_cmds'] = node['java']['ibm']['6']['bin_cmds'] + [ "pack200", "unpack200" ]
-when 'oracle_rpm'
+when 'oracle_rpm', 'oracle'
   # type of java RPM : jdk or jre
   default['java']['oracle_rpm']['type'] = 'jdk'
 
@@ -75,7 +75,7 @@ when 'oracle_rpm'
 end
 
 # if you change this to true, you can download directly from Oracle
-default['java']['oracle']['accept_oracle_download_terms'] = false
+default['java']['oracle']['accept_oracle_download_terms'] = true
 
 # direct download paths for oracle, you have been warned!
 

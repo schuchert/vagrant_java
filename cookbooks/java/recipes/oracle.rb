@@ -68,3 +68,7 @@ if node['java']['set_default'] and platform_family?('debian')
 end
 
 include_recipe 'java::oracle_jce' if node['java']['oracle']['jce']['enabled']
+
+java_alternatives "set java alternatives" do
+    action :set
+end
