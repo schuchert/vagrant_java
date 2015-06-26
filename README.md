@@ -16,6 +16,13 @@ cd vagrant_java
 ./first_time.sh
 ```
 
+# Still needs work:
+The Java cookbook should be setting the right JDK, but it doesn't 
+seem to (probably because I don't know what I'm doing). However, if
+you provision a second time it works. So the first_time.sh starts
+the vm and then immediately provisions it again. While ugly, it makes
+the desktop link to idea work so it's better than that not working.
+
 # Steps created to start this image:
 * vagrant init box-cutter/ubuntu1404-desktop
 * updated VirtualBox to have it match the destop extensions already installed in the downloaded box
