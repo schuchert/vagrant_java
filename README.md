@@ -1,3 +1,7 @@
+# General
+* Based on box-cutter/ubuntu1404-desktop
+* User/password: vagrant/vagrant
+
 # Using this VM
 * Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
   * Note: You might have to experiment with the version of VirtualBox on Windows 7 machines due to virus scanning software
