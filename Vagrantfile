@@ -25,7 +25,7 @@ Vagrant.configure(2) do |config|
 
     chef.json = {
       "java" => { 
-			  "set_etc_enviornment" => true,
+        "set_etc_enviornment" => true,
         "install_flavor" => "oracle", 
         "jdk_version" => "8", 
         "set_default" => true,
