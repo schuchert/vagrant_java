@@ -2,7 +2,37 @@ Java Cookbook CHANGELOG
 =======================
 This file is used to list changes made in each version of the Java cookbook.
 
-v1.30 - 2/3/2015
+v1.37 - 11/9/2015
+------
+- (Win) Attirbute for specifying the install directory for the public jre #315
+
+v1.36 - 9/3/2015
+------
+- Oracle JDK 1.8.0_65
+- Add Ubuntu ppa (allows OpenJDK 8)
+- Added ChefSpec matchers #284
+- Fix compile error using Chef::Application.fatal #279
+- #222 Provide possibility to set ark download timeout
+- Openjdk6 does not exist in deb 8.2
+- Change to create java home dir even if top level doesn't exist(Eg mkdir_p instead of mkdir)
+- Fix berks url and remove apt
+- Documentation and dependency updates
+
+v1.35 - 8/4/2015
+-------
+- Use bento boxes and remove EOL distros from testing suite.
+- Update to latest JDKs. Note Oracle JDK7 is now EOL.
+- Alternatives improvements
+- Fixes #155 to allow install of OpenJDK 1.8
+- Fixes #257 Changed switches for the jdk 8 exe installer on windows
+- Make sure tar package installed for java_ark
+- Add support for Mac OS X "mac_os_x" via homebrew.
+- Update metadata.rb to contain source and issue information for supermarket and chef-repo convenience
+
+### Known Issues
+- Kitchen CI test with 12.04 fails due to hostname unable to be set.
+
+v1.31 - 2/3/2015
 -------
 - Update to latest JDKs for 7 and 8. JDK7 will be EOL April 2015
 - Fix up Travis support.
