@@ -1,5 +1,5 @@
 # General
-* Based on box-cutter/ubuntu1404-desktop
+* Based on box-cutter/ubuntu1504-desktop
 * User/password: vagrant/vagrant
 
 # Using this VM
